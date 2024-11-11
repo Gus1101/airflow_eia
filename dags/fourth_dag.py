@@ -19,7 +19,7 @@ task6 = BashOperator(task_id="task6", bash_command="exit 1", dag=dag)
 task7 = BashOperator(task_id="task7", bash_command="sleep 5", dag=dag)
 task8 = BashOperator(task_id="task8", bash_command="sleep 5", dag=dag)
 task9 = BashOperator(task_id="task9", bash_command="sleep 5", dag=dag,
-                     trigger_rule = "one_failed")
+                     trigger_rule = "one_failed") # If task6 is succesfully executed, task 9 must be skipped.
 
 # Exploring Precedence
 task1 >> task2
