@@ -3,8 +3,8 @@ from airflow.operators.bash import BashOperator
 from datetime import datetime
 
 dag = DAG(
-    dag_id="first_dag",
-    description="my first dag",
+    dag_id="second_dag",
+    description="my second dag",
     start_date=datetime(2024, 11, 9),
     schedule="@daily",
     catchup=False
