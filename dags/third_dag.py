@@ -15,5 +15,4 @@ task2 = BashOperator(task_id="task2", bash_command="sleep 5", dag=dag)
 task3 = BashOperator(task_id="task3", bash_command="sleep 5", dag=dag)
 
 # Exploring Precedence
-task1 >> task3
-task2 >> task3
+[task1, task2] >> task3
